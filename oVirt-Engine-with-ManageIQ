@@ -21,3 +21,20 @@ Trying to access the container via https://localhost:8443 will raise a "Secure C
 Waiting a few moments and trying again, will show you the "Insecure Connection" warning. Click on the "Advanced" button and 
 add an exception for the site. Confirming the exception should bring you to the ManageIQ Login page. 
 
+Default login for ManageIQ: 
+user - admin
+password - smartvm
+
+4. Change Options
+
+Click on 'Admininstrator' and then select 'Configuration' to change how the appliance behaves:
+1. Select the appliance to configure
+
+    CFME Region: Region 0 → Zones → Zone: Default zone(current) → Server: EVM[1](current) should be selected by default.
+
+    The hostname and IP address of the appliance will be shown here, be careful as in some cases this will be the internal IP address and not the one you connected to.
+
+    You can change the Company Name to whatever you want, the change will be reflected in the interface. 
+    Change it to ManageIQ
+    Select your time zone, and, if you want, you can change the language default.
+

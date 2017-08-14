@@ -38,3 +38,6 @@ Click on 'Admininstrator' and then select 'Configuration' to change how the appl
     Change it to ManageIQ
     Select your time zone, and, if you want, you can change the language default.
 
+Adding oVirt as a provider to ManageIQ:
+Compute -> Infrastructure -> Providers
+Click on "Configuration". Select 'Add a new infrastructure provider' or 'Discover Infrastructure Providers'. 

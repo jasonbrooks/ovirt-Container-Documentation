@@ -11,9 +11,33 @@ Pull the Docker image as follows:
 
 $ sudo docker pull manageiq/manageiq:fine-3
   
-At present, the tag is `fine:3` but that changes with time, so to be sure go to manageiq/download to see what the latest tag is.
+At present, the tag is `fine:3` but that changes with time, so to be sure go to https://manageiq/download to see what the latest tag is.
 
 2. Run the container
 
-$ sudo docker run --privileged -d -p 8443:443 manageiq/manageiq:fine-3
+sudo docker run --name ovirt-manageiq --privileged -d -p 8443:443 manageiq/manageiq:fine-3
 
+Trying to access the container via https://localhost:8443 will raise a "Secure Connection Failed" error. 
+Waiting a few moments and trying again, will show you the "Insecure Connection" warning. Click on the "Advanced" button and 
+add an exception for the site. Confirming the exception should bring you to the ManageIQ Login page. 
+
+Default login for ManageIQ: 
+user - admin
+password - smartvm
+
+4. Change Options
+
+Click on 'Admininstrator' and then select 'Configuration' to change how the appliance behaves:
+1. Select the appliance to configure
+
+    CFME Region: Region 0 → Zones → Zone: Default zone(current) → Server: EVM[1](current) should be selected by default.
+
+    The hostname and IP address of the appliance will be shown here, be careful as in some cases this will be the internal IP address and not the one you connected to.
+
+    You can change the Company Name to whatever you want, the change will be reflected in the interface. 
+    Change it to ManageIQ
+    Select your time zone, and, if you want, you can change the language default.
+
+Adding oVirt as a provider to ManageIQ:
+Compute -> Infrastructure -> Providers
+Click on "Configuration". Select 'Add a new infrastructure provider' or 'Discover Infrastructure Providers'. 

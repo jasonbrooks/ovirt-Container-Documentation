@@ -1,3 +1,7 @@
+The base environment is CentOS 7. 
+oVirt Engine is assumed to running as per the configuration in oVirt Engine with PostgreSQL. 
+
+### Steps
 1. Make sure that the Docker service is running:
 
 $ sudo service docker start

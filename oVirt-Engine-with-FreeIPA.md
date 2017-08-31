@@ -37,7 +37,7 @@ or
    
    ii. Build the image as follows:
    
-      `docker build -t freeipa-server`
+      `docker build -t freeipa-server`.
 
 4. Run the container image [2]
 

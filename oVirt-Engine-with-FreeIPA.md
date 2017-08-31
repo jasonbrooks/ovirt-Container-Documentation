@@ -379,6 +379,8 @@ You may use the command below:
   Enter it again: 
 
   ```
+8. Add the container's IP address to the `/etc/resolv.conf` file to use the FreeIPA container for DNS i.e. `nameserver CONTAINER-IP`
+
 [1]: Here the README for FreeIPA containers says that the option to build an image based on something other that what is offered by the default target can be specified using the -f option. Didn't work for me. Reference [here.](https://github.com/freeipa/freeipa-container)
 [2]: You may use the default ports for the FreeIPA container for easier debugging. I have done the port mapping to prevent conflicts with other containers on the host. 
 [3]: This refers to the issue detailed [here](http://www.ovirt.org/documentation/how-to/troubleshooting/troubleshooting/#adding-an-ipa-domain-to-ovirt-engine).
